@@ -7,5 +7,5 @@ int main(int argc, char *argv[])
 
     qDebug() << "Hello Test!";
 
-    return a.exec();
+    return 0;
 }
