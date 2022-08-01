@@ -12,8 +12,6 @@ jobs:
       - image: rabits/qt:5.14-desktop
     # Add steps to the job
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
-    expose:
-      - "5900"
     steps:
       - checkout
       - run:
@@ -24,7 +22,7 @@ jobs:
           command: "make"
       - run:
           name: "Esegui"
-          command: "./HelloWorldQt -platform vnc"
+          command: "./HelloWorldQt -platform vnc:size=800x600,port=12345"
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
