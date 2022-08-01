@@ -1,11 +1,11 @@
-#include <QCoreApplication>
-#include <QDebug>
+#include "mainwindow.h"
+
+#include <QApplication>
 
 int main(int argc, char *argv[])
 {
-    QCoreApplication a(argc, argv);
-
-    qDebug() << "Hello Test!";
-
-    return 0;
+    QApplication a(argc, argv);
+    MainWindow w;
+    w.show();
+    return a.exec();
 }
