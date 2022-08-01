@@ -12,6 +12,8 @@ jobs:
       - image: rabits/qt:5.14-desktop
     # Add steps to the job
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
+    ports:
+      - 5900:5900
     steps:
       - checkout
       - run:
